@@ -1,0 +1,39 @@
+*{}
+
+html {
+    height: 220px;
+}
+
+body {
+    height: 200px;
+}
+
+#QLTS_Extension{
+    width: 300px;
+    height: 200px;
+    border: 1px solid gray;
+    text-align: center;
+    background: #f7f78b;
+    border-radius: 3px;
+}
+
+.title-header{
+    padding: 10px;
+    line-height: 30px;
+    color: #1a73e8;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#btnStartProcess{
+    text-align: center;
+    width: 100px;
+    margin: auto;
+    background: #04aa6d;
+    line-height: 39px;
+    padding: 0 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+}
