@@ -1,39 +1,123 @@
-*{}
+* {}
 
-html {
-    height: 220px;
-}
-
-body {
-    height: 200px;
-}
-
-#QLTS_Extension{
-    width: 300px;
-    height: 200px;
-    border: 1px solid gray;
+.delete {
+    width: 30px;
+    border: 1px solid #646262;
+    padding: 5px;
+    margin-left: 5px;
+    color: white;
     text-align: center;
-    background: #f7f78b;
+    border-radius: 3px;
+    line-height: 11px;
+    background: #e45c5c;
+    cursor: pointer;
+}
+
+.list-name {
+    text-align: center;
+    font-weight: bold;
+    color: #5b5ba5;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #cecece;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(114, 113, 113);
+}
+
+.list-item {
+    height: 379px;
+    border: 1px solid #4c4ac2;
+    overflow-y: auto;
+    margin-top: 10px;
+    overflow-x: hidden;
     border-radius: 3px;
 }
 
-.title-header{
+.item-title {
+    flex: 1;
+}
+
+.action {
+    width: 50px;
+    border: 1px solid #c2a7a7;
+    padding: 5px;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 11px;
+    background: yellow;
+    cursor: pointer;
+}
+
+.main-content {
+    border-top: 1px solid #44a35b;
+    font-size: 15px;
+    text-align: left;
+    margin: 10px;
+}
+
+html {
+    height: 600px;
+}
+
+#QLTS_Extension {
+    width: 300px;
+    height: 580px;
+    border: 1px solid gray;
+    text-align: center;
+    background: #e4ffcd;
+    border-radius: 3px;
+}
+
+.title-header {
     padding: 10px;
     line-height: 30px;
     color: #1a73e8;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
 }
 
-#importLink{
+#importLink {
     text-align: center;
     width: 100px;
     margin: auto;
-    background: #04aa6d;
+    background: #12a31b;
     line-height: 39px;
     padding: 0 10px;
     border-radius: 3px;
     cursor: pointer;
     color: white;
+}
+
+.total-record {
+    display: none;
+    font-size: 15px;
+    text-align: left;
+    margin-top: 4px;
+    margin-bottom: 5px;
+}
+
+.item-detail {
+    display: flex;
+    border-bottom: 1px solid #3cce5e;
+    padding-bottom: 5px;
+}
+
+.item-detail {
+    margin: 5px;
 }

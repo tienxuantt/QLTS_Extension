@@ -1,3 +1,5 @@
-console.log("ntxuan test chrome extension");
+// Xử lý binding dữ liệu form
+function bindingDataForm(data){
 
-//$("#mainSideBar").hide();
+}
+

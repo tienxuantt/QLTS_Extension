@@ -1,12 +1,14 @@
+// Xử lý khi mới mở form
+getData(function(data){
+  if(data){
+    afterImportFile(data);
+  }
+});
+
 // Nhập khẩu file
 $("#importLink").on("click", function(){
   $("#importJson").click();   
 });
-
-// Xử lý sau khi import file
-function afterImportFile(data){
-  debugger
-}
 
 // Sự kiện khi thay đổi
 $("#importJson").on('change',function(e){
@@ -14,9 +16,13 @@ $("#importJson").on('change',function(e){
   var path = (window.URL || window.webkitURL).createObjectURL(file);
 
   readTextFile(path, function(text){
-    var data = JSON.parse(text);
+    try {
+      var data = JSON.parse(text);
 
-    setData(data, afterImportFile);
+      setData(data, afterImportFile);
+    } catch (error) {
+      alert("File dữ liệu không hợp lệ!");
+    }
   });
 });
 
@@ -33,4 +39,57 @@ function readTextFile(file, callback) {
     }
 
     rawFile.send(null);
+}
+
+// Khởi tạo sự kiện khi click vào nhập
+$(".list-item").on("click", ".action", function(){
+  let index = $(this).parent().attr("index");
+
+  debugger
+});
+
+// Khởi tạo sự kiện khi click vào nhập
+$(".list-item").on("click", ".delete", function(){
+  let index = $(this).parent().attr("index");
+
+  // Lấy dữ liệu để xóa bỏ một phần tử
+  getData(function(data){
+    if(data && data.Data){
+      data.Data.splice(index, 1);
+
+      setData(data, (response) => {
+        afterImportFile(response)
+      });
+    }
+  });
+});
+
+// Xử lý sau khi import file
+function afterImportFile(data){
+  let totalRecords = data.Data.length;
+
+  $(".total-record").find("b").text(totalRecords);
+  $(".total-record").show();
+
+  // Render dữ liệu
+  renderListData(data);
+}
+
+/**
+ * Xử lý render dữ liệu nhập khẩu
+ */
+function renderListData(data){
+  if(data && data.Data){
+    $(".list-item").empty();
+
+    data.Data.filter(function(item, index){
+      let itemChild = `<div class="item-detail" index='${index}'>
+                    <div class="item-title">${item.fixed_asset_code}</div>
+                    <div class="action">Nhập</div>
+                    <div class="delete">Xóa</div>
+                  </div>`;
+
+        $(".list-item").append(itemChild);
+    });
+  }
 }

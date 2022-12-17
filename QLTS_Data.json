@@ -1,0 +1,109 @@
+{
+    "ControlType": {
+        "Text": 1,
+        "Number": 2,
+        "DateTime": 3,
+        "Combobox": 4,
+        "Radio": 5,
+        "Checkbox": 6
+    },
+    "ColumnConfig": [
+        {
+            "Field_QLTS": "fixed_asset_code",
+            "Field_TSC": "fixed_asset_code",
+            "ControlType": 1
+        },
+        {
+            "Field_QLTS": "fixed_asset_name",
+            "Field_TSC": "fixed_asset_name",
+            "ControlType": 1
+        },
+        {
+            "Field_QLTS": "amount",
+            "Field_TSC": "amount",
+            "ControlType": 2
+        },
+        {
+            "Field_QLTS": "quantity",
+            "Field_TSC": "quantity",
+            "ControlType": 2
+        },
+        {
+            "Field_QLTS": "production_year",
+            "Field_TSC": "production_year",
+            "ControlType": 2
+        }
+    ],
+    "Data": [
+        {
+            "fixed_asset_code": "TS0001",
+            "fixed_asset_name": "Tài sản nhà cấp IV",
+            "amount": 2000000,
+            "quantity": 10,
+            "production_year": 2022
+        },
+        {
+            "fixed_asset_code": "TS0002",
+            "fixed_asset_name": "Máy Scan",
+            "amount": 3000000,
+            "quantity": 3,
+            "production_year": 2021
+        },
+        {
+            "fixed_asset_code": "TS0003",
+            "fixed_asset_name": "Máy Vi Tính để bàn",
+            "amount": 2500000,
+            "quantity": 5,
+            "production_year": 2020
+        },
+        {
+            "fixed_asset_code": "TS0004",
+            "fixed_asset_name": "Máy vi tính để bàn HP",
+            "amount": 4500000,
+            "quantity": 7,
+            "production_year": 2023
+        },
+        {
+            "fixed_asset_code": "TS0005",
+            "fixed_asset_name": "Máy vi tính để bàn HP 2",
+            "amount": 600000,
+            "quantity": 2,
+            "production_year": 2022
+        },
+        {
+            "fixed_asset_code": "TS0006",
+            "fixed_asset_name": "Máy vi tính để bàn HP 3",
+            "amount": 600000,
+            "quantity": 21,
+            "production_year": 2023
+        },
+        {
+            "fixed_asset_code": "TS0007",
+            "fixed_asset_name": "Máy vi tính để bàn HP 4",
+            "amount": 300000,
+            "quantity": 4,
+            "production_year": 2021
+        },
+        {
+            "fixed_asset_code": "TS0008",
+            "fixed_asset_name": "Máy giặt sony",
+            "amount": 600000,
+            "quantity": 21,
+            "production_year": 2024
+        },
+        {
+            "fixed_asset_code": "TS0009",
+            "fixed_asset_name": "Tủ lạnh sanaky",
+            "amount": 800000,
+            "quantity": 1,
+            "production_year": 2019
+        },
+        {
+            "fixed_asset_code": "TS00010",
+            "fixed_asset_name": "Điện thoại nokia",
+            "amount": 10000,
+            "quantity": 2,
+            "production_year": 2018
+        }
+    ]
+}
