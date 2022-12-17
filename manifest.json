@@ -3,7 +3,7 @@
   "name": "QLTS_Extension",
   "description": "Phần mềm tiện ích giúp nhập nhanh vào phần mềm cơ sở dữ liệu quốc gia",
   "version": "1.0",
-  "permissions": ["scripting", "activeTab"],
+  "permissions": ["storage", "scripting", "activeTab"],
   "background": {
     "service_worker": "background.js"
   },

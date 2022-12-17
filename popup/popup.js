@@ -1,26 +1,36 @@
-// Lấy ra tab hiện tại
-async function getCurrentTab() {
-  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+// Nhập khẩu file
+$("#importLink").on("click", function(){
+  $("#importJson").click();   
+});
 
-  return tab;
-};
+// Xử lý sau khi import file
+function afterImportFile(data){
+  debugger
+}
 
-// Khởi tạo sự kiện khi click vào bắt đầu
-$("#btnStartProcess").off("click");
-$("#btnStartProcess").on("click", async function(){
-  let tab = await getCurrentTab();
+// Sự kiện khi thay đổi
+$("#importJson").on('change',function(e){
+  var file =  e.target.files[0];
+  var path = (window.URL || window.webkitURL).createObjectURL(file);
 
-  let field = "TS";
+  readTextFile(path, function(text){
+    var data = JSON.parse(text);
 
-  chrome.scripting.executeScript({
-    target: {tabId: tab.id},
-    func: bindingData,
-    args: [field]
+    setData(data, afterImportFile);
   });
 });
 
-// Binding dữ liệu cho ô 
-function bindingData(field){
-  debugger
-  $("#mainSideBar").hide();
-};
+// Đọc nội dung file json
+function readTextFile(file, callback) {
+  var rawFile = new XMLHttpRequest();
+
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+
+    rawFile.send(null);
+}
