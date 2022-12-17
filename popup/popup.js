@@ -101,7 +101,7 @@ function renderListData(data){
 
     data.Data.filter(function(item, index){
       let itemChild = `<div class="item-detail" index='${index}'>
-                    <div class="item-title">${item.fixed_asset_code}</div>
+                    <div class="item-title">${item.Ten_Tai_San}</div>
                     <div class="action">Nhập</div>
                     <div class="delete">Xóa</div>
                   </div>`;

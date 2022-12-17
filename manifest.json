@@ -11,12 +11,12 @@
     {
       "js": ["scripts/jquery.min.js","scripts/content.js"],
       "matches": [
-        "https://qltsapp.misa.vn/*"
+        "https://qltsc.mof.gov.vn/*"
       ]
     }
   ],
   "host_permissions": [
-    "https://qltsapp.misa.vn/*"
+    "https://qltsc.mof.gov.vn/*"
   ],
   "icons": {
     "16": "images/icon-16.png",

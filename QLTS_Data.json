@@ -9,101 +9,94 @@
     },
     "ColumnConfig": [
         {
-            "Field_QLTS": "fixed_asset_code",
-            "Field_TSC": "fixed_asset_code",
+            "Field_QLTS": "Ten_Tai_San",
+            "Field_TSC": "TEN",
             "ControlType": 1
         },
         {
-            "Field_QLTS": "fixed_asset_name",
-            "Field_TSC": "fixed_asset_name",
+            "Field_QLTS": "Ngay_Dua_Vao_Su_Dung",
+            "Field_TSC": "NGAY_SU_DUNG",
+            "ControlType": 3
+        },
+        {
+            "Field_QLTS": "Thong_So_Ky_Thuat",
+            "Field_TSC": "taisanmaymocModel_THONG_SO_KY_THUAT",
             "ControlType": 1
         },
         {
-            "Field_QLTS": "amount",
-            "Field_TSC": "amount",
+            "Field_QLTS": "Ngay_Tang",
+            "Field_TSC": "NGAY_NHAP", 
+            "ControlType": 3
+        },
+        {
+            "Field_QLTS": "Nhan_Hieu",
+            "Field_TSC": "taisanmaymocModel_THONG_SO_KY_HIEU",
+            "ControlType": 1
+        },
+        {
+            "Field_QLTS": "Nam_San_Xuat",
+            "Field_TSC": "NAM_SAN_XUAT",
+            "ControlType": 1
+        },
+        {
+            "Field_QLTS": "Mo_Ta_Chung",
+            "Field_TSC": "GHI_CHU",
+            "ControlType": 1
+        },
+        {
+            "Field_QLTS": "Nguyen_Gia",
+            "Field_TSC": "TongNguyenGia",
             "ControlType": 2
         },
         {
-            "Field_QLTS": "quantity",
-            "Field_TSC": "quantity",
+            "Field_QLTS": "Nguyen_Gia",
+            "Field_TSC": "NguonVon_1",
             "ControlType": 2
         },
         {
-            "Field_QLTS": "production_year",
-            "Field_TSC": "production_year",
+            "Field_QLTS": "Nguon_Khac",
+            "Field_TSC": "NguonVon_3",
             "ControlType": 2
+        },
+        {
+            "Field_QLTS": "Gia_Tri_Con_Lai",
+            "Field_TSC": "nvYeuCauChiTietModel_HM_GIA_TRI_CON_LAI",
+            "ControlType": 2
+        },
+        {
+            "Field_QLTS": "Hien_Trang_Su_Dung",
+            "Field_TSC": "nvYeuCauChiTietModel_HM_GIA_TRI_CON_LAI",
+            "ControlType": 6
         }
     ],
     "Data": [
         {
-            "fixed_asset_code": "TS0001",
-            "fixed_asset_name": "Tài sản nhà cấp IV",
-            "amount": 2000000,
-            "quantity": 10,
-            "production_year": 2022
+            "Ma_Tai_San": "TS0001",
+            "Ten_Tai_San": "Máy in chuyên dụng",
+            "Ngay_Dua_Vao_Su_Dung": "20/10/2022",
+            "Thong_So_Ky_Thuat": "Số máy QH-2022",
+            "Ngay_Tang": "05/02/2022",
+            "Nhan_Hieu": "TS",
+            "Nam_San_Xuat": 2022,
+            "Mo_Ta_Chung": "Tài sản văn phòng",
+            "Nguyen_Gia": 50000000,
+            "Nguon_Khac": 20000000,
+            "Gia_Tri_Con_Lai": 10000000,
+            "Hien_Trang_Su_Dung": "HienTrang_115"
         },
         {
-            "fixed_asset_code": "TS0002",
-            "fixed_asset_name": "Máy Scan",
-            "amount": 3000000,
-            "quantity": 3,
-            "production_year": 2021
-        },
-        {
-            "fixed_asset_code": "TS0003",
-            "fixed_asset_name": "Máy Vi Tính để bàn",
-            "amount": 2500000,
-            "quantity": 5,
-            "production_year": 2020
-        },
-        {
-            "fixed_asset_code": "TS0004",
-            "fixed_asset_name": "Máy vi tính để bàn HP",
-            "amount": 4500000,
-            "quantity": 7,
-            "production_year": 2023
-        },
-        {
-            "fixed_asset_code": "TS0005",
-            "fixed_asset_name": "Máy vi tính để bàn HP 2",
-            "amount": 600000,
-            "quantity": 2,
-            "production_year": 2022
-        },
-        {
-            "fixed_asset_code": "TS0006",
-            "fixed_asset_name": "Máy vi tính để bàn HP 3",
-            "amount": 600000,
-            "quantity": 21,
-            "production_year": 2023
-        },
-        {
-            "fixed_asset_code": "TS0007",
-            "fixed_asset_name": "Máy vi tính để bàn HP 4",
-            "amount": 300000,
-            "quantity": 4,
-            "production_year": 2021
-        },
-        {
-            "fixed_asset_code": "TS0008",
-            "fixed_asset_name": "Máy giặt sony",
-            "amount": 600000,
-            "quantity": 21,
-            "production_year": 2024
-        },
-        {
-            "fixed_asset_code": "TS0009",
-            "fixed_asset_name": "Tủ lạnh sanaky",
-            "amount": 800000,
-            "quantity": 1,
-            "production_year": 2019
-        },
-        {
-            "fixed_asset_code": "TS00010",
-            "fixed_asset_name": "Điện thoại nokia",
-            "amount": 10000,
-            "quantity": 2,
-            "production_year": 2018
+            "Ma_Tai_San": "TS0002",
+            "Ten_Tai_San": "Máy vi tính để bàn",
+            "Ngay_Dua_Vao_Su_Dung": "23/04/2021",
+            "Thong_So_Ky_Thuat": "Số máy QH-2021",
+            "Ngay_Tang": "03/01/2021",
+            "Nhan_Hieu": "TQ",
+            "Nam_San_Xuat": 2021,
+            "Mo_Ta_Chung": "Tài sản học tập",
+            "Nguyen_Gia": 70000000,
+            "Nguon_Khac": 10000000,
+            "Gia_Tri_Con_Lai": 6000000,
+            "Hien_Trang_Su_Dung": "HienTrang_118"
         }
     ]
 }
