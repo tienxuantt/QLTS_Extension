@@ -1,5 +1,5 @@
 // Xử lý binding dữ liệu form
-function bindingDataForm(data){
-
+function bindingDataForm(obj){
+    debugger
 }
 

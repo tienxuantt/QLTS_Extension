@@ -41,11 +41,28 @@ function readTextFile(file, callback) {
     rawFile.send(null);
 }
 
+// Chuẩn bị dữ liệu trước khi binding
+function prepareData(obj){
+  bindingDataForm(obj);
+}
+
 // Khởi tạo sự kiện khi click vào nhập
 $(".list-item").on("click", ".action", function(){
   let index = $(this).parent().attr("index");
 
-  debugger
+ // Lấy dữ liệu để binding
+ getData(function(data){
+    if(data && data.Data){
+      let obj = {
+        Data: data.Data[index],
+        ColumnConfig: data.ColumnConfig
+      };
+
+      if(obj){
+        sendDataToWeb(obj, prepareData);
+      }
+    }
+  });
 });
 
 // Khởi tạo sự kiện khi click vào nhập
