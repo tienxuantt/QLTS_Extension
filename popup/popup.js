@@ -43,7 +43,12 @@ function readTextFile(file, callback) {
 
 // Chuẩn bị dữ liệu trước khi binding
 function prepareData(obj){
-  bindingDataForm(obj);
+  addFixedAsset(obj);
+}
+
+// Mở form thêm mới
+function openFormAdd(obj){
+  showFormAdd(obj);
 }
 
 // Khởi tạo sự kiện khi click vào nhập
@@ -59,7 +64,13 @@ $(".list-item").on("click", ".action", function(){
       };
 
       if(obj){
-        sendDataToWeb(obj, prepareData);
+        // Mở form
+        sendDataToWeb(obj, openFormAdd);
+
+        // Truyền dữ liệu
+        setTimeout(function(){
+          sendDataToWeb(obj, prepareData);
+        }, 7000);
       }
     }
   });

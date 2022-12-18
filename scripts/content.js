@@ -1,3 +1,39 @@
+// Thêm mới một tài sản
+function addFixedAsset(obj){
+    // Binding dữ liệu vào form
+    bindingDataForm(obj);
+}
+
+// Show form
+function showFormAdd(obj){
+    goToLink(true, 6, false, false);
+}
+
+// Điều hướng tới trang thêm mới
+function goToLink(isTangMoi, _loaiHinh, _isCreateTSDA, _isTSQL) {
+		
+    if (isTangMoi === true) {
+        let _url = ""
+        if (_isTSQL == true) {
+            _url = "/TaiSan/Create?LoaiHinhTSId=" + _loaiHinh + "&loailydobiendongId=1&isTangMoi=true&isCreateTSDA=False&isTSQL=true";
+        }
+        else {
+            _url = "/TaiSan/Create?LoaiHinhTSId=" + _loaiHinh + "&loailydobiendongId=1&isTangMoi=true&isCreateTSDA=False&isTSQL=false";
+        }
+        window.location.replace(_url);
+    }
+    else {
+        let _url = ""
+        if (_isTSQL == true) {
+            _url = "/TaiSan/Create?LoaiHinhTSId=" + _loaiHinh + "&loailydobiendongId=1&isTangMoi=false&isCreateTSDA=False&isTSQL=true";
+        }
+        else {
+            _url = "/TaiSan/Create?LoaiHinhTSId=" + _loaiHinh + "&loailydobiendongId=1&isTangMoi=false&isCreateTSDA=False&isTSQL=false";
+        }
+        window.location.replace(_url);
+    }
+}
+
 // Xử lý binding dữ liệu form
 function bindingDataForm(obj){
     if(obj){
@@ -25,6 +61,17 @@ function bindingDataForm(obj){
                         break;
                 }
             });
+
+            // Tự động bấm lưu
+            setTimeout(function(){
+                $(".card-header .btnAdd").click();
+
+                setTimeout(function(){
+                    if($(`[data-bb-handler="confirm"]`).is(":visible")){
+                        $(`[data-bb-handler="confirm"]`).click();
+                    }
+                }, 400);
+            }, 600);
         }
     }
 }
