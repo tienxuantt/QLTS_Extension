@@ -67,7 +67,7 @@ function executeNextData(){
       if(autoAdd){
         $(".item-title:not(.success):first").next().click();
       }
-    }, 7000);
+    }, 6500);
 }
 
 // Cập nhật trạng thái sau khi thành công
@@ -111,7 +111,7 @@ function addFixedAssetByIndex(index){
         // Truyền dữ liệu
         setTimeout(function(){
           sendDataToWeb(obj, prepareData);
-        }, 7000);
+        }, 6500);
       }
     }
   });
