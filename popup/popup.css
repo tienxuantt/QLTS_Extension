@@ -52,6 +52,11 @@
     flex: 1;
 }
 
+.item-title.success {
+    font-weight: bold;
+    color: blue;
+}
+
 .action {
     width: 50px;
     border: 1px solid #c2a7a7;
@@ -71,12 +76,13 @@
 }
 
 html {
-    height: 567px;
+    height: 540px;
+    width: 500px;
 }
 
 #QLTS_Extension {
-    width: 300px;
-    height: 548px;
+    width: 483px;
+    height: 523px;
     border: 1px solid gray;
     text-align: center;
     background: #e4ffcd;

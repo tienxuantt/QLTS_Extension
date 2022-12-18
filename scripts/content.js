@@ -6,7 +6,9 @@ function addFixedAsset(obj){
 
 // Show form
 function showFormAdd(obj){
-    goToLink(true, 6, false, false);
+    if($("#name-list").length > 0){
+        goToLink(true, 6, false, false);
+    }
 }
 
 // Điều hướng tới trang thêm mới
@@ -68,12 +70,19 @@ function bindingDataForm(obj){
 
                 setTimeout(function(){
                     if($(`[data-bb-handler="confirm"]`).is(":visible")){
+                        // Gửi thông báo đã xong
+                        pushNofitySuccess();
                         $(`[data-bb-handler="confirm"]`).click();
                     }
                 }, 400);
             }, 600);
         }
     }
+}
+
+// Gửi lên để lấy tài sản tiếp theo
+function pushNofitySuccess(){
+    chrome.runtime.sendMessage("success", (response) => {});
 }
 
 // Xử lý binding control String

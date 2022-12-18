@@ -1,3 +1,8 @@
+// Tự động thêm các bản ghi
+var autoAdd = true;
+// Index của bản ghi hiện tại đang thực thi
+var indexActive = 0;
+
 // Xử lý khi mới mở form
 getData(function(data){
   if(data){
@@ -51,12 +56,43 @@ function openFormAdd(obj){
   showFormAdd(obj);
 }
 
-// Khởi tạo sự kiện khi click vào nhập
-$(".list-item").on("click", ".action", function(){
-  let index = $(this).parent().attr("index");
+// Gọi tới bản ghi tiếp theo
+function executeNextData(){
+    if(autoAdd){
+      setTimeout(function(){
+        $(".item-title:not(.success):first").next().click();
+      }, 7000);
+    }
+}
 
- // Lấy dữ liệu để binding
- getData(function(data){
+// Cập nhật trạng thái sau khi thành công
+function updateStatusData(){
+  // Lấy dữ liệu để xóa bỏ một phần tử
+  getData(function(data){
+    if(data && data.Data){
+      data.Data[indexActive].success = true;
+
+      setData(data, (response) => {
+        afterImportFile(response);
+
+        // Gọi tới bản ghi tiếp theo
+        executeNextData();
+      });
+    }
+  });
+}
+
+// Xử lý khi nhận được thông báo thành công
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message === 'success') {
+      updateStatusData();
+  }
+});
+
+// Thêm mới một tài sản
+function addFixedAssetByIndex(index){
+  // Lấy dữ liệu để binding
+  getData(function(data){
     if(data && data.Data){
       let obj = {
         Data: data.Data[index],
@@ -70,26 +106,36 @@ $(".list-item").on("click", ".action", function(){
         // Truyền dữ liệu
         setTimeout(function(){
           sendDataToWeb(obj, prepareData);
-        }, 7000);
+        }, 6000);
       }
     }
   });
+}
+
+// Khởi tạo sự kiện khi click vào nhập
+$(".list-item").on("click", ".action", function(){
+    let index = $(this).parent().attr("index");
+
+    // Lưu lại index đang thao tác
+    indexActive = index;
+
+    addFixedAssetByIndex(index);
 });
 
 // Khởi tạo sự kiện khi click vào nhập
 $(".list-item").on("click", ".delete", function(){
-  let index = $(this).parent().attr("index");
+    let index = $(this).parent().attr("index");
 
-  // Lấy dữ liệu để xóa bỏ một phần tử
-  getData(function(data){
-    if(data && data.Data){
-      data.Data.splice(index, 1);
+    // Lấy dữ liệu để xóa bỏ một phần tử
+    getData(function(data){
+      if(data && data.Data){
+        data.Data.splice(index, 1);
 
-      setData(data, (response) => {
-        afterImportFile(response)
-      });
-    }
-  });
+        setData(data, (response) => {
+          afterImportFile(response);
+        });
+      }
+    });
 });
 
 // Xử lý sau khi import file
@@ -112,7 +158,7 @@ function renderListData(data){
 
     data.Data.filter(function(item, index){
       let itemChild = `<div class="item-detail" index='${index}'>
-                    <div class="item-title">${item.Ten_Tai_San}</div>
+                    <div class="item-title ${item.success ? 'success' : ''}">${item.Ma_Tai_San} - ${item.Ten_Tai_San}</div>
                     <div class="action">Nhập</div>
                     <div class="delete">Xóa</div>
                   </div>`;
