@@ -14,6 +14,11 @@
             "ControlType": 1
         },
         {
+            "Field_QLTS": "Ly_Do_Tang",
+            "Field_TSC": "LY_DO_BIEN_DONG_ID_listbox",
+            "ControlType": 4
+        },
+        {
             "Field_QLTS": "Ngay_Dua_Vao_Su_Dung",
             "Field_TSC": "NGAY_SU_DUNG",
             "ControlType": 3
@@ -67,12 +72,52 @@
             "Field_QLTS": "Hien_Trang_Su_Dung",
             "Field_TSC": "nvYeuCauChiTietModel_HM_GIA_TRI_CON_LAI",
             "ControlType": 6
+        },
+        {
+            "Field_QLTS": "Phuong_Thuc_Mua_Sam",
+            "Field_TSC": "PHUONG_THUC_MUA_SAM_ID_listbox",
+            "ControlType": 4
+        },
+        {
+            "Field_QLTS": "Hinh_Thuc_Mua_Sam",
+            "Field_TSC": "HinhThucMuaSamId_listbox",
+            "ControlType": 4
+        },
+        {
+            "Field_QLTS": "Loai_Tai_San",
+            "Field_TSC": "LOAI_TAI_SAN_ID_listbox",
+            "ControlType": 4
+        },
+        {
+            "Field_QLTS": "Nuoc_San_Xuat",
+            "Field_TSC": "NUOC_SAN_XUAT_ID_listbox",
+            "ControlType": 4
+        },
+        {
+            "Field_QLTS": "Bo_Phan_Su_Dung",
+            "Field_TSC": "DON_VI_BO_PHAN_ID_listbox",
+            "ControlType": 4
+        },
+        {
+            "Field_QLTS": "Gia_Mua_Tren_Hoa_Don",
+            "Field_TSC": "giaMuaTiepNhan",
+            "ControlType": 2
+        },
+        {
+            "Field_QLTS": "Don_Vi_Mua_Sam_Tap_Trung",
+            "Field_TSC": "DonViMuaSamInput_listbox",
+            "ControlType": 4
         }
     ],
     "Data": [
         {
             "Ma_Tai_San": "TS0001",
             "Ten_Tai_San": "Máy in chuyên dụng",
+            "Ly_Do_Tang": "Mua sắm",
+            "Phuong_Thuc_Mua_Sam": "Mua sắm tập trung",
+            "Hinh_Thuc_Mua_Sam": "Đấu thầu",
+            "Gia_Mua_Tren_Hoa_Don": 2000000,
+            "Don_Vi_Mua_Sam_Tap_Trung": "Sở Nội vụ tỉnh Yên bái",
             "Ngay_Dua_Vao_Su_Dung": "20/10/2022",
             "Thong_So_Ky_Thuat": "Số máy QH-2022",
             "Ngay_Tang": "05/02/2022",
@@ -82,11 +127,19 @@
             "Nguyen_Gia": 50000000,
             "Nguon_Khac": 20000000,
             "Gia_Tri_Con_Lai": 10000000,
-            "Hien_Trang_Su_Dung": "HienTrang_115"
+            "Hien_Trang_Su_Dung": "HienTrang_115",
+            "Loai_Tai_San": "60107 - Máy hủy tài liệu (PB)",
+            "Nuoc_San_Xuat": "Việt Nam",
+            "Bo_Phan_Su_Dung": "Bộ phận kế toán"
         },
         {
             "Ma_Tai_San": "TS0002",
             "Ten_Tai_San": "Máy vi tính để bàn",
+            "Ly_Do_Tang": "Tiếp nhận",
+            "Phuong_Thuc_Mua_Sam": null,
+            "Hinh_Thuc_Mua_Sam": null,
+            "Gia_Mua_Tren_Hoa_Don": null,
+            "Don_Vi_Mua_Sam_Tap_Trung": null,
             "Ngay_Dua_Vao_Su_Dung": "23/04/2021",
             "Thong_So_Ky_Thuat": "Số máy QH-2021",
             "Ngay_Tang": "03/01/2021",
@@ -96,7 +149,10 @@
             "Nguyen_Gia": 70000000,
             "Nguon_Khac": 10000000,
             "Gia_Tri_Con_Lai": 6000000,
-            "Hien_Trang_Su_Dung": "HienTrang_118"
+            "Hien_Trang_Su_Dung": "HienTrang_118",
+            "Loai_Tai_San": "60114 - Máy sưởi (PB)",
+            "Nuoc_San_Xuat": "Việt Nam",
+            "Bo_Phan_Su_Dung": "Bộ phận kế toán"
         }
     ]
 }

@@ -17,6 +17,9 @@ function bindingDataForm(obj){
                     case 3: // DateTime
                         bindingControlDateTime(item, data);
                         break;
+                    case 4: // Combobox
+                        bindingControlCombobox(item, data);
+                        break;
                     case 6: // Checkbox
                         bindingControlCheckbox(item, data);
                         break;
@@ -54,6 +57,25 @@ function bindingControlNumber(config, data){
             control.prev().val(valueFormat);
             control.attr("aria-valuenow", value);
             control.prev().attr("aria-valuenow", value);
+        }
+    }
+}
+
+// Xử lý binding control Combobox
+function bindingControlCombobox(config, data){
+    let control = $(`ul#${config.Field_TSC}`);
+
+    if(control.length > 0){
+        let value = data[config.Field_QLTS];
+
+        if(value){
+            control.find("li").each(function(){
+                let spanText = $(this).text();
+
+                if(spanText.toLocaleLowerCase().trim().includes(value.toLocaleLowerCase().trim())){
+                    $(this).click();
+                }
+            });
         }
     }
 }
