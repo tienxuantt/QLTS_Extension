@@ -1,5 +1,5 @@
 // Tự động thêm các bản ghi
-var autoAdd = true;
+var autoAdd = false;
 // Index của bản ghi hiện tại đang thực thi
 var indexActive = 0;
 
@@ -8,6 +8,11 @@ getData(function(data){
   if(data){
     afterImportFile(data);
   }
+});
+
+// Khởi tạo sự kiện tự động nhập liệu kế tiếp
+$("#autoAdd").change(function() {
+  autoAdd = this.checked;
 });
 
 // Nhập khẩu file
@@ -58,11 +63,11 @@ function openFormAdd(obj){
 
 // Gọi tới bản ghi tiếp theo
 function executeNextData(){
-    if(autoAdd){
-      setTimeout(function(){
+    setTimeout(function(){
+      if(autoAdd){
         $(".item-title:not(.success):first").next().click();
-      }, 7000);
-    }
+      }
+    }, 7000);
 }
 
 // Cập nhật trạng thái sau khi thành công
@@ -106,7 +111,7 @@ function addFixedAssetByIndex(index){
         // Truyền dữ liệu
         setTimeout(function(){
           sendDataToWeb(obj, prepareData);
-        }, 6000);
+        }, 7000);
       }
     }
   });
@@ -143,7 +148,7 @@ function afterImportFile(data){
   let totalRecords = data.Data.length;
 
   $(".total-record").find("b").text(totalRecords);
-  $(".total-record").show();
+  $(".main-content").show();
 
   // Render dữ liệu
   renderListData(data);

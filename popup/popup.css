@@ -1,5 +1,10 @@
 * {}
 
+label.autoAdd {
+    margin-left: 4px;
+    line-height: 28px;
+}
+
 .delete {
     width: 30px;
     border: 1px solid #646262;
@@ -40,10 +45,9 @@
 }
 
 .list-item {
-    height: 345px;
+    height: 350px;
     border: 1px solid #4c4ac2;
     overflow-y: auto;
-    margin-top: 10px;
     overflow-x: hidden;
     border-radius: 3px;
 }
@@ -69,6 +73,7 @@
 }
 
 .main-content {
+    display: none;
     border-top: 1px solid #44a35b;
     font-size: 15px;
     text-align: left;
@@ -111,11 +116,15 @@ html {
 }
 
 .total-record {
-    display: none;
     font-size: 15px;
     text-align: left;
     margin-top: 4px;
     margin-bottom: 5px;
+    width: 267px;
+}
+
+.main-conten-header{
+    display: flex;
 }
 
 .item-detail {
