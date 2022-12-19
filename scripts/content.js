@@ -51,7 +51,7 @@ function bindingDataForm(obj){
     
                 // Tự động bấm lưu
                 setTimeout(function(){
-                    $(".card-header .btnAdd").click();
+                    $(".card-header .btnAdd:first").click();
     
                     setTimeout(function(){
                         if($(`[data-bb-handler="confirm"]`).is(":visible")){
@@ -59,8 +59,8 @@ function bindingDataForm(obj){
                             pushNofitySuccess();
                             $(`[data-bb-handler="confirm"]`).click();
                         }
-                    }, 400);
-                }, 600);
+                    }, 600);
+                }, 800);
             }
         }
     } catch (error) {

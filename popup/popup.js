@@ -67,7 +67,7 @@ function executeNextData(){
       if(autoAdd){
         $(".item-title:not(.success):first").next().click();
       }
-    }, 6500);
+    }, 7000);
 }
 
 // Cập nhật trạng thái sau khi thành công
