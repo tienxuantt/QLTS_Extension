@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "QLTS_Extension",
+  "name": "MISA_QLTS AutoFill",
   "description": "Phần mềm tiện ích giúp nhập nhanh vào phần mềm cơ sở dữ liệu quốc gia",
   "version": "1.0",
   "permissions": ["storage", "scripting", "activeTab"],
@@ -23,6 +23,6 @@
   },
   "action": {
     "default_popup": "popup/popup.html",
-    "default_title": "QLTS Extension"
+    "default_title": "MISA_QLTS AutoFill"
   }
 }

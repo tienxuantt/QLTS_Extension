@@ -111,7 +111,7 @@ function addFixedAssetByIndex(index){
         // Truyền dữ liệu
         setTimeout(function(){
           sendDataToWeb(obj, prepareData);
-        }, 6500);
+        }, 7000);
       }
     }
   });
